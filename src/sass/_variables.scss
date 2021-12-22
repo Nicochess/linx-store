@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+// PROJECT COLORS
+$light-green: #00A868;
+$light-black: #363636;
+$light-purple: #6E4B87;
+$dark-purple: #422755;
+$full-white: #ffffff;
+$light-black: #363636;
+$full-black: #000000;
+
+
+$font-stack: 'Open Sans', sans-serif;
+$page-title: 24px;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
