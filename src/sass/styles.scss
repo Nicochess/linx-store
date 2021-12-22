@@ -13,6 +13,10 @@ body {
     font-family: $font-stack;
 }
 
+button, select {
+    cursor: pointer;
+}
+
 .header {
     @include flexCenter;
     flex-direction: column;
@@ -52,7 +56,7 @@ body {
 .page__container {
     max-width: 1080px;
     padding: 0 10px;
-    margin: 0 0 40px;
+    margin: 0 auto 40px;
 }
 
 .form__filter {
@@ -121,13 +125,19 @@ body {
 
 .card {
     display: flex;
+    position: relative;
     margin: 0 0 20px;
     padding: 20px 10px;
     border: 1px solid $full-black;
     border-radius: 15px;
 
-    &.missing {
-        opacity: 0.4;
+    .missing {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        height: calc(100% + 2px);
+        width: calc(100% + 2px);
+        background: rgba(255, 255, 255, 0.6);
     }
 
     .card__image {
@@ -153,6 +163,11 @@ body {
             font-weight: 400;
             font-size: 14px;
             margin: 0 0 10px;
+        }
+
+        .prices {
+            display: flex;
+            flex-direction: column;
         }
 
         .oldprice {
@@ -223,7 +238,7 @@ body {
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .product__list {
         display: grid;
         grid-template-columns: repeat(2, 49%);
@@ -233,5 +248,35 @@ body {
 
     .card {
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product__list {
+        grid-template-columns: repeat(4, 24%);
+        gap: 20px 10px;
+    }
+
+    .card {
+        flex-direction: column;
+
+        .card__image,
+        .card__content {
+            width: 100%;
+        }
+
+        .card__actions {
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .company {
+        max-width: 1080px;
+        flex-direction: row;
+        margin: 0 auto;
     }
 }

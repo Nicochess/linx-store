@@ -5,7 +5,7 @@ const FormFilter = () => {
     <form className='form__filter'>
       <div className="form__control">
         <input type="text" id="search" className='form__field' />
-        <button class="btn">Buscar</button>
+        <button className="btn">Buscar</button>
       </div>
       <div className="form__control">
         <label htmlFor="deadline" className="select__label">Filtrar por:</label>
