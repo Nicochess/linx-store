@@ -1,10 +1,5 @@
 import "./sass/styles.css";
-import Header from "./components/Header";
-import CardList from "./components/CardList";
-import FormFilter from "./components/FormFilter";
-import Company from "./components/Company";
-import Footer from "./components/Footer";
-import MailForm from "./components/MailForm";
+import Home from "./pages/Home";
 
 function App() {
   const dummy_data = [
@@ -96,14 +91,7 @@ function App() {
 
   return (
     <>
-      <Header />
-      <main className="page__container">
-        <FormFilter />
-        <CardList data={dummy_data} />
-      </main>
-      <MailForm />
-      <Company />
-      <Footer />
+      <Home data={dummy_data}/>
     </>
   );
 }
