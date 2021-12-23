@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/linx-store/static/css/main.e73bbc30.css",
+    "main.js": "/linx-store/static/js/main.54e0d400.js",
+    "static/js/787.2430f0ee.chunk.js": "/linx-store/static/js/787.2430f0ee.chunk.js",
+    "index.html": "/linx-store/index.html",
+    "main.e73bbc30.css.map": "/linx-store/static/css/main.e73bbc30.css.map",
+    "main.54e0d400.js.map": "/linx-store/static/js/main.54e0d400.js.map",
+    "787.2430f0ee.chunk.js.map": "/linx-store/static/js/787.2430f0ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e73bbc30.css",
+    "static/js/main.54e0d400.js"
+  ]
+}
