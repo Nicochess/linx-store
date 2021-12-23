@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/linx-store/static/css/main.044df4ea.css",
-    "main.js": "/linx-store/static/js/main.54e0d400.js",
+    "main.css": "/linx-store/static/css/main.51247ffb.css",
+    "main.js": "/linx-store/static/js/main.0c5f8b70.js",
     "static/js/787.2430f0ee.chunk.js": "/linx-store/static/js/787.2430f0ee.chunk.js",
     "index.html": "/linx-store/index.html",
-    "main.044df4ea.css.map": "/linx-store/static/css/main.044df4ea.css.map",
-    "main.54e0d400.js.map": "/linx-store/static/js/main.54e0d400.js.map",
+    "main.51247ffb.css.map": "/linx-store/static/css/main.51247ffb.css.map",
+    "main.0c5f8b70.js.map": "/linx-store/static/js/main.0c5f8b70.js.map",
     "787.2430f0ee.chunk.js.map": "/linx-store/static/js/787.2430f0ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.044df4ea.css",
-    "static/js/main.54e0d400.js"
+    "static/css/main.51247ffb.css",
+    "static/js/main.0c5f8b70.js"
   ]
 }
