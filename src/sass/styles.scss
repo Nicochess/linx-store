@@ -98,7 +98,6 @@ select {
     .form__select {
         min-height: 36px;
         border-radius: 8px;
-        background: $full-white;
     }
 
     .select__label {
@@ -114,6 +113,7 @@ select {
         padding: 0 30px;
         appearance: none;
         background-image: url("../assets/arrow-select.png");
+        background-color: $full-white;
         background-repeat: no-repeat;
         background-position: 90% 50%;
     }
