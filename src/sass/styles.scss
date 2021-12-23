@@ -13,7 +13,8 @@ body {
     font-family: $font-stack;
 }
 
-button, select {
+button,
+select {
     cursor: pointer;
 }
 
@@ -89,12 +90,7 @@ button, select {
         position: absolute;
         top: 2px;
         right: 2px;
-        font-family: $font-stack;
         font-size: 16px;
-        font-weight: 700;
-        border: 0;
-        border-radius: 8px;
-        background: $light-green;
         color: $full-white;
         padding: 5px 10px;
     }
@@ -137,7 +133,31 @@ button, select {
         left: -1px;
         height: calc(100% + 2px);
         width: calc(100% + 2px);
+        border-radius: 15px;
         background: rgba(255, 255, 255, 0.6);
+    }
+
+    .flags__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 15px;
+        left: -4px;
+
+        .flag {
+            font-size: 11px;
+            border-radius: 0 8px 8px 0;
+            padding: 5px 10px;
+            color: $full-white;
+            background: $dark-purple;
+            margin-bottom: 5px;
+        }
+
+        .discount {
+            font-weight: 700;
+            background: $light-green;
+        }
     }
 
     .card__image {
@@ -194,15 +214,16 @@ button, select {
 
         .btn {
             width: 100%;
-            color: $full-white;
-            background: $light-green;
-            border: 0;
             border-radius: 5px;
-            padding: 10px;
-            font-weight: 700;
             text-transform: uppercase;
         }
     }
+}
+
+.load {
+    @include flexCenter;
+    margin: 20px auto;
+    padding: 10px 30px;
 }
 
 .company {
@@ -224,6 +245,10 @@ button, select {
 .company__resume {
     margin: 30px 0;
     padding: 0 10px;
+}
+
+.mail__container {
+    display: none;
 }
 
 .footer {
@@ -252,6 +277,38 @@ button, select {
 }
 
 @media screen and (min-width: 1024px) {
+    .header {
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+        margin: 0 0 40px;
+        background: #422755;
+        text-align: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 99%;
+            width: 100%;
+            height: 15px;
+            background: $dark-purple;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+    }
+
+    .header__title {
+        min-height: unset;
+        margin: 0 0 20px;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .header__info {
+        color: $full-white;
+    }
+
     .product__list {
         grid-template-columns: repeat(4, 24%);
         gap: 20px 10px;
@@ -259,6 +316,16 @@ button, select {
 
     .card {
         flex-direction: column;
+        transition: .3s;
+
+        &:hover {
+            box-shadow: 0px 0px 5px $light-black;
+
+            .card__actions .btn {
+                opacity: 1;
+                transform: translateY(-15px);
+            }
+        }
 
         .card__image,
         .card__content {
@@ -271,12 +338,69 @@ button, select {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            .btn {
+                opacity: 0;
+                transform: translateY(15px);
+                transition: .3s;
+            }
         }
     }
 
     .company {
-        max-width: 1080px;
+        max-width: 980px;
         flex-direction: row;
         margin: 0 auto;
+    }
+
+    .mail__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 980px;
+        width: 90%;
+        padding: 20px 40px;
+        border-radius: 8px;
+        margin: 20px auto;
+        background: $light-green;
+
+        .mail__title {
+            color: $full-white;
+        }
+
+        .mail__form {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .form__control {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 350px;
+            width: 45%;
+        }
+
+        .form__field {
+            width: 100%;
+        }
+
+        .form__label {
+            margin-left: 5px;
+            font-size: 12px;
+            color: $full-white;
+            text-transform: lowercase;
+        }
+
+        .btn {
+            margin: 0 0 10px auto;
+            padding: 10px 20px;
+            background: $full-white;
+            color: $light-green;
+
+            &:hover {
+                background: $light-gray;
+            }
+        }
     }
 }

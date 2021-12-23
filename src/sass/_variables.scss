@@ -2,16 +2,34 @@
 
 // PROJECT COLORS
 $light-green: #00A868;
-$light-black: #363636;
+$dark-green: #013920;
+
 $light-purple: #6E4B87;
 $dark-purple: #422755;
+
 $full-white: #ffffff;
+$light-gray: #e3e3e3;
+
 $light-black: #363636;
 $full-black: #000000;
 
 
 $font-stack: 'Open Sans', sans-serif;
 $page-title: 24px;
+
+.btn {
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    background: $light-green;
+    font-family: $font-stack;
+    color: $full-white;
+
+    &:hover {
+        background: darken($light-green, 10%);
+    }
+}
 
 @mixin flexCenter {
     display: flex;

@@ -14,9 +14,23 @@ const Card = ({
     return Number(`${num}`).toFixed(2).replace(".", ",");
   };
 
+  const discountFlag = () => {
+    return Math.floor(((oldPrice - price) * 100) / oldPrice);
+  };
+
   return (
     <article className="card" key={id} id={id}>
-      <span className={!available ? "missing" : undefined}></span>
+      <div className="flags__container">
+        {available ? (
+          <>
+            <span className="flag discount">{discountFlag()}% OFF</span>
+            {details.freeShipping ? <span className='flag'>Frete Grátis</span> : undefined}
+          </>
+        ) : undefined}
+      </div>
+
+      {!available ? <span className="missing"></span> : undefined}
+      <div className="flags"></div>
       <section className="card__image">
         <img src={image_url} alt={name} />
       </section>
