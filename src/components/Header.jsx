@@ -1,5 +1,5 @@
 const Header = () => {
-  const title = 'Link & Stone Store'
+  const title = 'Linx & Stone Store'
 
   return (
     <header className="header">

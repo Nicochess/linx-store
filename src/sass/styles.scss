@@ -83,7 +83,6 @@ select {
         width: 100%;
         padding: 10px;
         border: 0;
-        background: $full-white;
     }
 
     .btn {
@@ -99,6 +98,7 @@ select {
     .form__select {
         min-height: 36px;
         border-radius: 8px;
+        background: $full-white;
     }
 
     .select__label {
@@ -161,6 +161,7 @@ select {
     }
 
     .card__image {
+        @include flexCenter;
         width: 45%;
         margin-right: 10px;
 
