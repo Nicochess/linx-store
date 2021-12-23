@@ -89,9 +89,9 @@ select {
         position: absolute;
         top: 2px;
         right: 2px;
-        font-size: 16px;
+        font-size: 14px;
         color: $full-white;
-        padding: 5px 10px;
+        padding: 6.5px 10px;
     }
 
     .form__field,
@@ -346,6 +346,22 @@ select {
                 transition: .3s;
             }
         }
+
+        .card__content {
+            .prices {
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+
+                * {
+                    margin: 0;
+                }
+            }
+
+            .unavaliable {
+                height: 60px;
+            }
+        }
     }
 
     .company {
@@ -357,7 +373,7 @@ select {
     .mail__container {
         display: flex;
         flex-direction: column;
-        max-width: 980px;
+        max-width: 900px;
         width: 90%;
         padding: 20px 40px;
         border-radius: 8px;

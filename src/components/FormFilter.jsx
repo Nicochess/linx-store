@@ -4,7 +4,7 @@ const FormFilter = () => {
   return (
     <form className='form__filter'>
       <div className="form__control">
-        <input type="text" id="search" className='form__field' />
+        <input type="text" id="search" className='form__field' placeholder='Buscar por produto' />
         <button className="btn">Buscar</button>
       </div>
       <div className="form__control">
