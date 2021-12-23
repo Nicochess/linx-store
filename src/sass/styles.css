@@ -103,7 +103,7 @@ select {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 20px;
+  padding: 15px 20px;
   margin: 0 0 20px;
   border-radius: 8px;
   background: #00A868;
@@ -127,7 +127,7 @@ select {
 
 .form__control .form__field {
   width: 100%;
-  padding: 10px;
+  padding: 10px 75px 10px 10px;
   border: 0;
 }
 
@@ -467,9 +467,9 @@ select {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     gap: 10px;
   }
   .card .card__content .prices * {
@@ -485,6 +485,9 @@ select {
         -ms-flex-direction: row;
             flex-direction: row;
     margin: 0 auto;
+  }
+  .company .text {
+    text-align: left;
   }
   .mail__container {
     display: -webkit-box;
