@@ -11,11 +11,20 @@ const Card = ({
   isMobile,
 }) => {
   const commaNum = (num) => {
-    return Number(`${num}`).toFixed(2).replace(".", ",");
+    return num.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
   };
 
-  const discountFlag = () => {
-    return Math.floor(((oldPrice - price) * 100) / oldPrice);
+  const discountValue = () => {
+    const value = ((oldPrice - price) * 100) / oldPrice;
+    return value.toFixed(0);
+  };
+
+  const hasDiscount = oldPrice !== price && {
+    flag: <span className="flag discount">{discountValue()}% OFF</span>,
+    value: <span className="oldprice">{commaNum(oldPrice)}</span>,
   };
 
   return (
@@ -23,8 +32,10 @@ const Card = ({
       <div className="flags__container">
         {available ? (
           <>
-            <span className="flag discount">{discountFlag()}% OFF</span>
-            {details.freeShipping ? <span className='flag'>Frete Grátis</span> : undefined}
+            {hasDiscount.flag}
+            {details.freeShipping ? (
+              <span className="flag">Frete Grátis</span>
+            ) : undefined}
           </>
         ) : undefined}
       </div>
@@ -39,8 +50,8 @@ const Card = ({
         {available ? (
           <>
             <div className="prices">
-              <span className="oldprice">R$ {commaNum(oldPrice)}</span>
-              <strong className="price">R$ {commaNum(price)}</strong>
+              {hasDiscount.value}
+              <strong className="price">{commaNum(price)}</strong>
             </div>
             <span className="installment">
               10x de {commaNum(price / 10)} sem juros

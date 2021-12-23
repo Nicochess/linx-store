@@ -32,7 +32,7 @@ function App() {
       name: "Notebook StoneCO Prime 4GB RAM SSD 500GB Tela 15,6 Windows 10",
       image_url: "https://i.imgur.com/CpNAH6e.png",
       brand: "Stone",
-      oldPrice: 2499.9,
+      oldPrice: 2399.9,
       price: 2399.9,
       available: true,
       details: {
