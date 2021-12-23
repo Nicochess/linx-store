@@ -34,7 +34,7 @@ const CardList = ({ data }) => {
     <>
       <section className="product__list">{cardComponent}</section>
       {data.length > visibleCards ? (
-        <button onClick={handleClick} className="btn load">Ver mais</button>
+        <button onClick={handleClick} className="btn load">Ver mais +</button>
       ) : undefined}
     </>
   );
